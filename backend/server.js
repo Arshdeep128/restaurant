@@ -8,11 +8,27 @@ const app = express();
 
 connectDB();
 
+const PORT = process.env.PORT || 5000
+
 app.get("/", (req, res) => {
 
-    res.send("Api is running");
+    res.send(`request is sent on the ${PORT}`);
 });
 
-const PORT = process.env.PORT || 5000
+app.post("/item", (req, res) => {
+
+    res.send(`post request is sending on port ${PORT} `);
+});
+
+app.put("/newItem", (req, res) => {
+
+    res.send(`post request is sending on port ${PORT} `);
+});
+
+app.delete("/newItem", (req, res) => {
+
+    res.send(`post request is sending on port ${PORT} `);
+});
+
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));

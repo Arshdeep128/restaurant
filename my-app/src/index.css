@@ -81,6 +81,7 @@ body {
 
 .form-control label {
   display: block;
+  grid-template-columns: 2px;
 }
 
 .form-control input {

@@ -23,11 +23,14 @@ const AddTask = ({onAdd}) => {
     }
 
   return (
-    <form className = 'add-form' onSubmit ={onSubmit}>
-        <div className = 'form-control'>
+    <div className = 'grid-container'>
+
+<div className='grid-item'>
+  <form className = 'add-form' onSubmit ={onSubmit}>
+        <div>
 
             <label>
-                Task 
+                Medecine Name 
                 </label>
                 <input type= 'text' placeholder='Add Task' value={text} onChange={(e) => setText(e.target.value)}></input>
             
@@ -36,23 +39,60 @@ const AddTask = ({onAdd}) => {
         <div className = 'form-control form-control-check'>
 
             <label>
-                Day and time
+                Doctor Name
                 </label>
                 <input type= 'text' placeholder='Add Task' value={day} onChange={(e) => setDay(e.target.value)}></input>
            
         </div>
 
-        <div className = 'form-control'>
+        <div className = 'form-control form-control-check'>
 
             <label>
-               Set Reminder 
+                Disease
                 </label>
-                <input type= 'checkbox'  checked={reminder} value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)} />
+                <input type= 'text' placeholder='Add Task' value={day} onChange={(e) => setDay(e.target.value)}></input>
            
         </div>
-      
-      <input type='submit' value='Save Task' className='btn btn-block'></input>
-    </form>
+
+      </form>
+</div>
+
+<div  className='grid-item'>
+
+      <form className = 'add-form' onSubmit ={onSubmit}>
+        <div >
+
+            <label>
+                Previous Health Care Center
+                </label>
+                <input type= 'text' placeholder='Add Task' value={text} onChange={(e) => setText(e.target.value)}></input>
+            
+        </div>
+
+        <div className = 'form-control form-control-check'>
+
+            <label>
+                Specialist
+                </label>
+                <input type= 'text' placeholder='Add Task' value={day} onChange={(e) => setDay(e.target.value)}></input>
+           
+        </div>
+
+        <div className = 'form-control form-control-check'>
+
+            <label>
+                Experience
+                </label>
+                <input type= 'text' placeholder='Add Task' value={day} onChange={(e) => setDay(e.target.value)}></input>
+           
+        </div>
+
+      </form>
+      </div>
+    </div>
+    
+
+
   )
 }
 

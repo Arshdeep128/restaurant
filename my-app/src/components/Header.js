@@ -8,14 +8,15 @@ const Header = ({title, onAdd}) => {
     <header className = 'header' >
       <h1 >{title}</h1>
       <Button color = 'green' text = 'Add' onClick = {onAdd} />
-     
+      <Button color = 'red' text = 'Delete' onClick = {onAdd} />
+
     </header>
   )
 }
 
 Header.defaultProps = {
 
-    title: 'Task Traker'
+    title: 'Place your order'
 }
 
 Header.propTypes = {
